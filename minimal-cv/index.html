@@ -32,15 +32,15 @@
   <section id="top" style="padding:clamp(40px,8vw,72px) 0 clamp(40px,7vw,64px);position:relative;overflow:hidden">
     <div style="position:absolute;right:-60px;top:10px;width:clamp(120px,24vw,220px);aspect-ratio:1;border-radius:999px;background:var(--color-accent-2-200);z-index:0"></div>
     <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:22px;max-width:660px">
-      <span class="tag tag-accent-2" style="align-self:flex-start">Frontend Tech Lead · Senior Engineer · Full Stack</span>
+      <span class="tag tag-accent-2" style="align-self:flex-start">Frontend Tech Lead · UI Developer · Full Stack</span>
       <h1 style="font-family:var(--font-heading);font-weight:400;font-size:clamp(36px,6vw,60px);line-height:1.05;margin:0;text-wrap:pretty">I build the front layer of ambitious products.</h1>
-      <p style="font-size:clamp(16px,2.2vw,19px);line-height:1.6;margin:0;text-wrap:pretty">Frontend Tech Lead with 14+ years designing, architecting and shipping web applications - React, TypeScript and micro frontends, with full-stack depth in Node.js, PHP and cloud.</p>
+      <p style="font-size:clamp(16px,2.2vw,19px);line-height:1.6;margin:0;text-wrap:pretty">Frontend Tech Lead with 14+ years designing, architecting and delivering web applications across event ticketing, telecom, grocery retail, service businesses and healthcare analytics - React, TypeScript and Micro Frontends, with full-stack depth in Node.js, PHP/Laravel and cloud.</p>
       <div style="display:flex;gap:12px;flex-wrap:wrap">
         <a class="btn btn-primary" href="mailto:vipinkumarkp.dev@gmail.com">Email me</a>
-        <a class="btn btn-secondary" href="Portfolio Resume.dc.html">Full résumé</a>
+        <a class="btn btn-secondary" href="https://vipinkumar-expanded-portfolio.vercel.app/">Full résumé</a>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:4px 18px;font-size:14px;color:var(--color-neutral-800)">
-        <span>Trivandrum, Kerala, India</span><a href="tel:+919539355759">+91 95393 55759</a><a href="https://linkedin.com/in/vipinkumarkp" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/vipinkumarkp" target="_blank" rel="noreferrer">GitHub</a>
+        <span>Ernakulam, Kerala, India</span><a href="tel:+919539357559">+91 95393 57559</a><a href="https://linkedin.com/in/vipinkumarkp" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/vipinkumarkp" target="_blank" rel="noreferrer">GitHub</a>
       </div>
     </div>
   </section>
@@ -54,7 +54,7 @@
   <section style="padding:0 0 64px;display:flex;flex-direction:column;gap:20px">
     <h2 style="font-family:var(--font-heading);font-weight:400;font-size:clamp(26px,4vw,32px);margin:0">What I bring</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px">
-      <sc-for list="{{ strengths }}" as="s" hint-placeholder-count="3">
+      <sc-for list="{{ strengths }}" as="s" hint-placeholder-count="6">
         <div style="display:flex;flex-direction:column;gap:8px;padding:4px 0">
           <span style="width:34px;height:34px;border-radius:999px;background:var(--color-accent-200);color:var(--color-accent-800);display:grid;place-items:center;font-weight:700;font-size:14px">{{ s.n }}</span>
           <strong style="font-size:17px">{{ s.title }}</strong>
@@ -121,7 +121,7 @@
     <div style="display:flex;gap:10px 20px;flex-wrap:wrap;font-size:15px">
       <a href="https://linkedin.com/in/vipinkumarkp" target="_blank" rel="noreferrer" style="color:var(--color-bg)">LinkedIn</a>
       <a href="https://github.com/vipinkumarkp" target="_blank" rel="noreferrer" style="color:var(--color-bg)">GitHub</a>
-      <a href="tel:+919539355759" style="color:var(--color-bg)">+91 95393 55759</a>
+      <a href="tel:+919539357559" style="color:var(--color-bg)">+91 95393 57559</a>
     </div>
   </section>
   <footer style="padding:0 0 40px;font-size:14px;color:var(--color-neutral-700)">© 2026 Vipinkumar K P</footer>
@@ -132,31 +132,39 @@ class Component extends DCLogic {
   renderVals() {
     return {
       strengths: [
-        { n: "01", title: "Frontend architecture", body: "Scalable React apps, micro frontends, reusable component systems and clean state management." },
-        { n: "02", title: "Full-stack range", body: "Node.js, PHP/Laravel, REST APIs, PostgreSQL/MongoDB, AWS and Docker - I can own a feature end to end." },
-        { n: "03", title: "Technical leadership", body: "Module ownership, code review, mentoring, sprint planning and root-cause analysis with cross-functional teams." }
+        { n: "01", title: "Frontend architecture", body: "Scalable React apps, micro frontends, reusable component libraries and clean, predictable state management (Redux, Saga, Thunk, Context API)." },
+        { n: "02", title: "Full-stack range", body: "Node.js, PHP/Laravel, REST APIs, PostgreSQL/MongoDB/MySQL, AWS and Docker - I can own a feature from database to UI." },
+        { n: "03", title: "Technical leadership", body: "Module ownership, code review, mentoring developers, sprint planning and cross-functional collaboration with Solution Architects." },
+        { n: "04", title: "Product engineering", body: "Stripe payments, PostHog analytics, PWAs and responsive, mobile-first UI built from Figma." },
+        { n: "05", title: "Quality and testing", body: "Unit and component testing with Jest and React Testing Library, refactoring and SonarQube-tracked code quality." },
+        { n: "06", title: "Modern delivery", body: "AI-assisted development (Claude, ChatGPT, Gemini, Antigravity, Windsurf, Devin) to speed up delivery while keeping quality high." }
       ],
       jobs: [
-        { role: "Tech Lead - Frontend", company: "Lushcoders LLP", dates: "Jan 2025 - Present", impact: "Own frontend architecture and delivery for Pinyada, an event-based social platform; lead and mentor the React team." },
-        { role: "Senior Software Engineer - UI Lead", company: "6D Technologies", dates: "Dec 2022 - May 2024", impact: "Led UI for a telecom inventory platform built as micro frontends (React 18, Redux, MUI); refactored for quality and lower complexity." },
-        { role: "Product Engineer", company: "Cognetry Labs", dates: "Mar 2021 - Nov 2022", impact: "Built grocery-retail web apps and a PWA; Redux/Saga state and REST integrations from Figma designs." },
-        { role: "Senior Software Engineer", company: "Augment India", dates: "Sep 2020 - Feb 2021", impact: "Full-stack work on ProviderFlow and LandGenius - React, Laravel, Node.js on AWS and Docker." },
-        { role: "Senior Software Engineer", company: "Binary Fountain (Press Ganey)", dates: "Apr 2015 - Jul 2020", impact: "Five healthcare-analytics product and service apps across React, PHP and REST APIs." },
-        { role: "Software Engineer", company: "Xminds InfoTech", dates: "Jan 2012 - Apr 2015", impact: "Core team building full-stack web and mobile apps across multiple PHP frameworks and Cordova." }
+        { role: "Tech Lead - Frontend", company: "Lushcoders LLP", dates: "Jan 2025 - Present", impact: "Own frontend architecture and delivery for Pinyada, an event ticketing social platform; built end-to-end Stripe payments, instrumented PostHog analytics and mentor the React team." },
+        { role: "Senior Software Engineer - UI Lead", company: "6D Technologies", dates: "Dec 2022 - May 2024", impact: "Led frontend implementation of a telecom inventory platform's Micro Frontend architecture; widgets reused across products, SonarQube-tracked refactoring, mentoring and sprint planning." },
+        { role: "Product Engineer", company: "Cognetry Labs", dates: "Mar 2021 - Nov 2022", impact: "Built grocery-retail web apps and an offline-capable PWA; reusable component library from Figma, REST and Hasura integrations with Redux Thunk/Saga." },
+        { role: "Senior Software Engineer", company: "Augment India", dates: "Sep 2020 - Feb 2021", impact: "Full-stack work on ProviderFlow and LandGenius - React, PHP/Laravel, Node.js and REST APIs on AWS and Docker." },
+        { role: "Senior Software Engineer", company: "Binary Fountain (Press Ganey)", dates: "Apr 2015 - Jul 2020", impact: "Built and evolved five healthcare reputation and analytics products with React, PHP, CodeIgniter and CakePHP, plus Jaspersoft and MicroStrategy reporting." },
+        { role: "Software Engineer", company: "Xminds InfoTech", dates: "Jan 2012 - Apr 2015", impact: "Core team building full-stack web and hybrid mobile apps from scratch with PHP frameworks, jQuery Mobile and Cordova." }
       ],
       skills: [
-        { label: "Frontend", items: ["React.js", "TypeScript", "JavaScript", "Redux", "Context API", "Tailwind CSS", "MUI"] },
-        { label: "Architecture", items: ["Micro Frontends", "Component systems", "State management"] },
-        { label: "Backend", items: ["Node.js", "PHP", "Laravel", "REST APIs"] },
-        { label: "Data & Cloud", items: ["PostgreSQL", "MongoDB", "MySQL", "AWS", "Docker"] },
-        { label: "Product", items: ["Stripe payments", "PostHog analytics", "AI-assisted dev"] },
-        { label: "Leadership", items: ["Code review", "Mentoring", "Sprint planning", "RCA"] }
+        { label: "Frontend", items: ["React.js", "Next.js", "TypeScript", "JavaScript", "Redux", "Redux Saga", "Context API", "Tailwind CSS", "MUI", "Angular", "Vue.js"] },
+        { label: "Architecture", items: ["Micro Frontends", "Component systems", "State management", "UI architecture"] },
+        { label: "Backend", items: ["Node.js", "PHP", "Laravel", "CodeIgniter", "Hasura", "REST APIs"] },
+        { label: "Data & Cloud", items: ["PostgreSQL", "MongoDB", "MySQL", "AWS", "Docker", "Cloudflare"] },
+        { label: "Mobile & Testing", items: ["React Native", "PWA", "Cordova", "Jest", "React Testing Library"] },
+        { label: "Product", items: ["Stripe payments", "PostHog analytics", "Google Maps / Places API", "AI-assisted dev"] },
+        { label: "Leadership", items: ["Code review", "Mentoring", "Sprint planning", "Team allocation", "RCA", "Agile / Scrum"] }
       ],
       projects: [
-        { name: "Pinyada", desc: "Event-based social platform with free and paid events.", tech: "Frontend leadership · React" },
-        { name: "ARM · SMART · VFP", desc: "Telecom inventory platform built as micro frontends.", tech: "React · Redux · Node.js · MUI" },
-        { name: "Cognetry · AdCartSpace", desc: "Grocery-retail web apps and a Progressive Web App.", tech: "React · Node.js · Hasura · Redux" },
-        { name: "Binary Health Analytics", desc: "Healthcare reputation and analytics products.", tech: "React · PHP · CodeIgniter" }
+        { name: "Pinyada", desc: "Event-centred social ticketing platform for meaningful connections, with free and paid events, group chat and Stripe payments.", tech: "React · TypeScript · Stripe · PostHog" },
+        { name: "ARM · SMART · VFP", desc: "Inventory platform and UI widgets for telecommunication firms, built with a Micro Frontend approach.", tech: "React · Redux · Node.js · MUI · Micro Frontends" },
+        { name: "Cognetry · AdCartSpace", desc: "Grocery-retail web applications and supporting tools, including a Progressive Web App.", tech: "React · Node.js · Hasura · REST API · Redux" },
+        { name: "ProviderFlow · LandGenius", desc: "Service-based business applications with responsive UI and cloud-hosted backends.", tech: "React · Laravel · Node.js · AWS · Docker" },
+        { name: "Binary Health Analytics", desc: "Healthcare reputation and analytics product and service web applications.", tech: "React · PHP · CodeIgniter · CakePHP · REST API" },
+        { name: "Social Compass", desc: "Web application development and engineering support.", tech: "React · PHP · MUI · REST API" },
+        { name: "Campaign BHA · NLP QC Tool · Personal Invite", desc: "Additional healthcare product and service web applications.", tech: "React · PHP · REST API" },
+        { name: "FlowVio & more", desc: "Early full-stack projects including MarketSystem, Scoop Recipe, Scoop News, Village Hive, Plan Central, Eco-buddy, EduWise, AnnieTiang and Donate Blood Today.", tech: "PHP · MySQL · JavaScript · jQuery · REST API" }
       ]
     };
   }
